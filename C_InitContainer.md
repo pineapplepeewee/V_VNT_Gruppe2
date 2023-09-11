@@ -2,9 +2,11 @@
 
 ## Aufgabe C: Init Container
 
-Zuerst wird der Hauptcontainer `myapp-pod` erstellt mit 2 Init Containers. Die 2 Init Containers warten auf die 2 Services `myservice` und `mydb`, die später erstellt werden. Erst wenn er sich mit den 2 Services verbinden konnte, wird der Hauptcontainer erstellt bzw. ausgeführt. Ausschlaggebend hier ist der Code-Stück `until nslookup myservice` bzw. `until nslookup mydb`. Somit wird ein Echo bzw. Ausgabe gemacht mit dem Text "waiting for myservice" oder "waiting for mydb", solange er die beiden Services noch nicht erreichen kann.
+Zuerst wird der Hauptcontainer `myapp-pod` erstellt mit 2 Init Containers. Die 2 Init Containers warten auf die 2 Services `myservice` und `mydb`, die später erstellt werden. Erst wenn er sich mit den 2 Services verbinden konnte, wird der Hauptcontainer erstellt bzw. ausgeführt. Ausschlaggebend hier ist der Code-Stück `until nslookup myservice` bzw. `until nslookup mydb`.
+Somit wird ein Echo bzw. Ausgabe gemacht mit dem Text "waiting for myservice" oder "waiting for mydb", solange er die beiden Services noch nicht erreichen kann.
 
-Den YAML-Code kann man hier eingeben, sodass der (Haupt)-Container mit den 2 Init-Containern erstellt wird: [Link zur Kubernetes-Oberfläche](https://10.5.38.10:8443/#/create?namespace=default)
+Den YAML-Code kann man hier eingeben, sodass der (Haupt)-Container mit den 2 Init-Containern erstellt wird:
+[Link zur Kubernetes-Oberfläche](https://10.5.38.10:8443/#/create?namespace=default)
 
 ```yaml
 apiVersion: v1
