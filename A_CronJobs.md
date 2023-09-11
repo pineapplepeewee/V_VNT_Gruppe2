@@ -1,21 +1,12 @@
 # CronJobs
-## Link Unterrichtsressourcen
-
-https://gitlab.com/ch-tbz-hf/Stud/v-cnt/-/tree/main/2_Unterrichtsressourcen/A
-
-## CronJob erstellen
-
-https://10.5.38.10:8443/#/create?namespace=default
-
-
-**Jobs**
-
+## Links
 - [Link zu den Ressourcen im GitLab](https://gitlab.com/ch-tbz-hf/Stud/v-cnt/-/tree/main/2_Unterrichtsressourcen/A)
 - [Link zur Kubernetes-Oberfläche](https://10.5.38.10:8443/#/create?namespace=default)
 
-**CronJob erstellen (zum Beispiel, dieser wartet jeweils 30 Sekunden)**
+## CronJob erstellen
 
-**YAML-Code:**
+CronJobs sind etwa wie Scheduled Tasks. Der folgende CronJob berechnet die Zahl PI und gibt sie aus, danach wartet er 30 Sekunden.
+
 
 ```yaml
 apiVersion: batch/v1
@@ -31,6 +22,10 @@ spec:
       - name: pi
         image: perl:5.34.0
         command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+        actions: "Sleep well, darling"
+        type: "SLEEP"
+        trigger_time: "ON_EVERY_EXECUTION"
+        sleep_in_sec: 30
       restartPolicy: OnFailure
   backoffLimit: 4
 ```
@@ -39,8 +34,12 @@ Unser Skript führt einen Perl-Befehl aus, um die Zahl Pi zu berechnen und den W
 
 Am Anfang sieht man links "1 Job Running" (Unser CronJob "pi") und rechts "Running 2" (Momentan).
 
+![Durchlauf 1](/Bilder/A_CronJobs_JobPods1.png)
+
 Beim dritten Durchlauf der Pods sieht es dann so aus:
 
-[Hier kann ein Screenshot eingefügt werden]
+![Durchlauf 1](/Bilder/A_CronJobs_JobPodsDurchlauf2.png)
 
 Am Ende wurde der Job erfolgreich ausgeführt, und alle Pods sind auf "Succeeded" gesetzt.
+
+![Durchlauf 1](/Bilder/A_CronJobs_JobPodsDurchlauf3_Succeeded.png)
