@@ -33,7 +33,7 @@ spec:
         command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
       restartPolicy: OnFailure
   backoffLimit: 4
-
+```
 
 Unser Skript führt einen Perl-Befehl aus, um die Zahl Pi zu berechnen und den Wert dann auszugeben. Nach dem Job wartet er 30 Sekunden, bevor der Job gestartet wird. Insgesamt werden 6 Pods erstellt, wobei jeweils 2 parallel laufen.
 
