@@ -33,3 +33,14 @@ spec:
         command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
       restartPolicy: OnFailure
   backoffLimit: 4
+
+
+Unser Skript führt einen Perl-Befehl aus, um die Zahl Pi zu berechnen und den Wert dann auszugeben. Nach dem Job wartet er 30 Sekunden, bevor der Job gestartet wird. Insgesamt werden 6 Pods erstellt, wobei jeweils 2 parallel laufen.
+
+Am Anfang sieht man links "1 Job Running" (Unser CronJob "pi") und rechts "Running 2" (Momentan).
+
+Beim dritten Durchlauf der Pods sieht es dann so aus:
+
+[Hier kann ein Screenshot eingefügt werden]
+
+Am Ende wurde der Job erfolgreich ausgeführt, und alle Pods sind auf "Succeeded" gesetzt.
