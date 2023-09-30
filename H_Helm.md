@@ -38,7 +38,7 @@ Zum löschen der Dateien im Ordner wird der Befehl „rm -r *“ verwendet
 
 ![Durchlauf 1](Bilder/D_HELM_HelmChart_TemplatesLoeschen.png)
 
-Jetzt erstellen wir unsere eigene Datei mit dem Namen "configmap.yaml". Das YAML erstellt einene Job mit dem NAmen "pi"
+Jetzt erstellen wir unsere eigene Datei mit dem Namen "configmap.yaml". Das YAML erstellt einene Job mit dem Namen "pi"
 
 ![Durchlauf 1](Bilder/D_HELM_EigenesHelmchart_JobPi_YAML.png)
 
@@ -54,7 +54,9 @@ helm install full-coral ./helmcronjobs
 ![Durchlauf 1](Bilder/D_HELM_HelmChart_install.png)
 
 Mit dem folgenden Code kann das Template veranschaulicht werden (bzw unser YAML File):
+```yaml
 helm get manifest full-coral
+```
 
 ![Durchlauf 1](Bilder/D_HELM_HelmChart_getmanifest.png)
 
