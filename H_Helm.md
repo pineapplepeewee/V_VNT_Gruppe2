@@ -1,4 +1,4 @@
-# Aufgabe D - HELM
+# Aufgabe H - HELM
 
 ## Links
 - [Link zu den Ressourcen im GitLab](https://gitlab.com/ch-tbz-hf/Stud/v-cnt/-/tree/main/2_Unterrichtsressourcen/H)
