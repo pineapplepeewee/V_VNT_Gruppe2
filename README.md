@@ -7,5 +7,5 @@
 [E - Zugriffssteuerung](/E_Zugriffssteuerung.md)<br>
 [C - Init Container](/C_InitContainer.md)<br>
 [H - Helm - Der Paketmanager für Kubernetes](/H_Helm.md)<br>
-
+[I - Operator Pattern](/I_OperatorPattern.md)<br>
 
