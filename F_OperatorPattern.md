@@ -1,5 +1,11 @@
 ## Operator Pattern
 
+# Aufgabe E - Zugriffssteuerung
+
+## Links
+- [Link zu den Ressourcen im GitLab](https://gitlab.com/ch-tbz-hf/Stud/v-cnt/-/tree/main/2_Unterrichtsressourcen/I)
+- [Link zur Kubernetes-Oberfläche](https://10.5.38.10:8443/#/create?namespace=default)
+
 Grundkonzept des Operator Patterns
 
 Ein Operator in Kubernetes ist eine Methode, um benutzerdefinierte Logik zur Verwaltung von Anwendungen zu implementieren. Ein Beispiel hierfür könnte der "MySampleDB Operator" sein:
